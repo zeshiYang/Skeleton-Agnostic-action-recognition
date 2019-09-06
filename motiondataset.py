@@ -72,8 +72,8 @@ class MotionDataset(Dataset):
                 self.Tmax = T
             if(T<self.Tmin):
                 self.Tmin = T
-            motion_padding = np.zeros((300, 25*(self.channels), 1))
-            motion_padding[0:T, :, :] = motion.copy().reshape((motion.shape[0], motion.shape[1], 1))
+            motion_padding = np.zeros((300, 25*(self.channels), 2))
+            motion_padding[0:T, :, :] = motion.copy()
             if(self.zeroPadding == False):
                 for j in range(T, 300):
                     motion_padding[j, :, :] = motion[-1,:,:].copy()

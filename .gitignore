@@ -1,0 +1,6 @@
+*.png
+*.PNG
+tools/shape_motions
+feature_test
+data_experiment
+__pycache__
